@@ -23,3 +23,11 @@ Finally, if you'd like to output to a different directory than the default `publ
 ```
 mix.stylus("bootstrap.styl", "public/css/foo/bar/");
 ```
+
+To set a custom directory set the stylusDir
+Note: this directory is appened to the assetsDir and does not require a leading slash
+```
+elixir.stylusDir = 'path/to/stylus/dir';
+mix.stylus("bootstrap.styl");
+```
+
