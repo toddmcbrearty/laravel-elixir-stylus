@@ -10,7 +10,9 @@ elixir.extend('stylus', function(src, output) {
 
     var config = this;
 
-    var baseDir = config.preprocessors.baseDir + 'stylus';
+    var stylusDir = config.stylusDir || "stylus";
+
+    var baseDir = config.assetsDir + stylusDir;
 
     src = this.buildGulpSrc(src, baseDir, '**/*.styl');
 
